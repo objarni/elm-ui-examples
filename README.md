@@ -1,7 +1,16 @@
 # elm-ui-examples
 A collection of simple examples of layouts using elm-ui.
 
-## Examples
+## Running the examples
+
+In a terminal type
+
+    elm reactor
+    
+.. And browse the src folder.
+
+The examples were developer for Elm 0.19.1.
+
 
 ### CenteredBox
 A horisontally and vertically centered fixed-size box with centered text in it. 
