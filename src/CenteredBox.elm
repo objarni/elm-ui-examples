@@ -9,8 +9,12 @@ import Element
         , centerX
         , centerY
         , el
+        , height
+        , rgb255
         , text
+        , width
         )
+import Element.Background as Bg
 import Html exposing (Html)
 
 
@@ -23,4 +27,15 @@ main =
 
 box : Element a
 box =
-    el [ centerX, centerY ] (text "CENTERED")
+    el
+        [ centerX -- these two centers the div
+        , centerY
+        , Bg.color (rgb255 150 150 250)
+        , width (Element.px 150)
+        , height (Element.px 150)
+        ]
+        (el
+            -- these two centers the text in div
+            [ centerX, centerY ]
+            (text "CENTERED")
+        )
