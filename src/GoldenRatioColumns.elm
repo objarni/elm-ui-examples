@@ -1,7 +1,5 @@
 module GoldenRatioColumns exposing (main)
 
--- this is standard Elm
-
 import Element
     -- this is elm-ui
     exposing
