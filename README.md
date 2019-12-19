@@ -7,7 +7,7 @@ In a terminal type
 
     elm reactor
     
-.. And browse the src folder.
+Then browse the `src` folder from `localhost:8000`.
 
 The examples were developer for Elm 0.19.1.
 
