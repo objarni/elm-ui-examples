@@ -8,6 +8,7 @@ import Element
         , centerY
         , el
         , height
+        , image
         , padding
         , rgb255
         , spacing
@@ -29,22 +30,32 @@ main =
 responsiveRow : Element a
 responsiveRow =
     wrappedRow
-        [ centerY, spacing 10 ]
+        [ centerY, padding 10, centerX ]
         [ box
+        , img
         , box
+        , img
         , box
-        , box
-        , box
-        , box
+        , img
         ]
 
 
 box =
     el
         -- these two centers the text in div
-        [ width (Element.px 150)
-        , height (Element.px 150)
-        , padding 10
-        , Bg.color (rgb255 150 150 250)
-        ]
+        (Bg.color (rgb255 150 150 250) :: fixedWidthHeight)
         (text "BOX")
+
+
+img =
+    el
+        []
+        (image fixedWidthHeight { src = "image.jpeg", description = "An apple" })
+
+
+fixedWidthHeight =
+    [ width fixedSize, height fixedSize ]
+
+
+fixedSize =
+    Element.px 150
