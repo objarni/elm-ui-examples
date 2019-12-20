@@ -1,4 +1,7 @@
 # elm-ui-examples
+
+![Screenshot](/Screenshot.png?raw=true "Screenshot")
+
 A collection of simple examples of layouts using elm-ui.
 
 ## Running the examples
@@ -9,7 +12,7 @@ In a terminal type
     
 Then browse the `src` folder from `localhost:8000`.
 
-The examples were developer for Elm 0.19.1.
+Assuming Elm 0.19.1.
 
 
 ### CenteredBox
