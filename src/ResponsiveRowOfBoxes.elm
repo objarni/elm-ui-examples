@@ -1,21 +1,7 @@
 module ResponsiveRowOfBoxes exposing (main)
 
-import Element
-    -- this is elm-ui
-    exposing
-        ( Element
-        , centerX
-        , centerY
-        , el
-        , height
-        , image
-        , padding
-        , rgb255
-        , text
-        , width
-        , wrappedRow
-        )
-import Element.Background as Bg
+import Element exposing (Element)
+import Element.Background as Background
 import Html exposing (Html)
 
 
@@ -28,8 +14,8 @@ main =
 
 responsiveRow : Element a
 responsiveRow =
-    wrappedRow
-        [ centerY, padding 10, centerX ]
+    Element.wrappedRow
+        [ Element.centerY, Element.padding 10, Element.centerX ]
         [ box
         , img
         , box
@@ -40,20 +26,20 @@ responsiveRow =
 
 
 box =
-    el
-        -- these two centers the text in div
-        (Bg.color (rgb255 150 150 250) :: fixedWidthHeight)
-        (text "BOX")
+    Element.el
+        -- these two centers the Element.text in div
+        (Background.color (Element.rgb255 150 150 250) :: fixedWidthHeight)
+        (Element.text "BOX")
 
 
 img =
-    el
+    Element.el
         []
-        (image fixedWidthHeight { src = "image.jpeg", description = "An apple" })
+        (Element.image fixedWidthHeight { src = "apple.jpeg", description = "An apple" })
 
 
 fixedWidthHeight =
-    [ width fixedSize, height fixedSize ]
+    [ Element.width fixedSize, Element.height fixedSize ]
 
 
 fixedSize =
