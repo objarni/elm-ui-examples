@@ -11,7 +11,6 @@ import Element
         , image
         , padding
         , rgb255
-        , spacing
         , text
         , width
         , wrappedRow

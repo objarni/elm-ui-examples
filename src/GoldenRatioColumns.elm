@@ -5,8 +5,6 @@ import Element
     exposing
         ( Element
         , alignBottom
-        , centerX
-        , centerY
         , column
         , el
         , fill
