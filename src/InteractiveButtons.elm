@@ -4,8 +4,7 @@ import Browser
 import Element
 import Element.Background as Bg
 import Element.Input as Input
-import Html exposing (Html, button, div, text)
-import Html.Events exposing (onClick)
+import Html exposing (Html)
 
 
 type alias Model =
