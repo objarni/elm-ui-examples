@@ -27,18 +27,17 @@ responsiveRow =
 
 box =
     Element.el
-        -- these two centers the Element.text in div
-        (Background.color (Element.rgb255 150 150 250) :: fixedWidthHeight)
+        (Background.color (Element.rgb255 150 150 250) :: dim)
         (Element.text "BOX")
 
 
 img =
     Element.el
         []
-        (Element.image fixedWidthHeight { src = "apple.jpeg", description = "An apple" })
+        (Element.image dim { src = "apple.jpeg", description = "An apple" })
 
 
-fixedWidthHeight =
+dim =
     [ Element.width fixedSize, Element.height fixedSize ]
 
 
