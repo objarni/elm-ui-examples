@@ -1,18 +1,7 @@
 module CenteredBox exposing (main)
 
-import Element
-    -- this is elm-ui
-    exposing
-        ( Element
-        , centerX
-        , centerY
-        , el
-        , height
-        , rgb255
-        , text
-        , width
-        )
-import Element.Background as Bg
+import Element exposing (Element)
+import Element.Background
 import Html exposing (Html)
 
 
@@ -25,15 +14,15 @@ main =
 
 box : Element a
 box =
-    el
-        [ centerX -- these two centers the div
-        , centerY
-        , Bg.color (rgb255 150 150 250)
-        , width (Element.px 150)
-        , height (Element.px 150)
+    Element.el
+        [ Element.centerX -- these two centers the div
+        , Element.centerY
+        , Element.Background.color (Element.rgb255 150 150 250)
+        , Element.width (Element.px 150)
+        , Element.height (Element.px 150)
         ]
-        (el
-            -- these two centers the text in div
-            [ centerX, centerY ]
-            (text "CENTERED")
+        (Element.el
+            -- these two centers the Element.text in div
+            [ Element.centerX, Element.centerY ]
+            (Element.text "CENTERED")
         )
