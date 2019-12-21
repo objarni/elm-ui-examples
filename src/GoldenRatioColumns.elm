@@ -1,21 +1,7 @@
 module GoldenRatioColumns exposing (main)
 
-import Element
-    -- this is elm-ui
-    exposing
-        ( Element
-        , alignBottom
-        , column
-        , el
-        , fill
-        , fillPortion
-        , height
-        , rgb255
-        , row
-        , text
-        , width
-        )
-import Element.Background as Background
+import Element exposing (Element)
+import Element.Background
 import Html exposing (Html)
 
 
@@ -28,35 +14,35 @@ main =
 
 goldenRatio : Element a
 goldenRatio =
-    row [ width fill, height fill ] [ leftColumn, rightColumn ]
+    Element.row [ Element.width Element.fill, Element.height Element.fill ] [ leftColumn, rightColumn ]
 
 
 leftColumn : Element a
 leftColumn =
-    column
-        [ width (fillPortion 2)
-        , height fill
-        , Background.color (rgb255 100 50 100)
+    Element.column
+        [ Element.width (Element.fillPortion 2)
+        , Element.height Element.fill
+        , Element.Background.color (Element.rgb255 100 50 100)
         ]
-        [ text "#general"
-        , text "#random"
-        , text "#some-topic"
+        [ Element.text "#general"
+        , Element.text "#random"
+        , Element.text "#some-topic"
         ]
 
 
 rightColumn : Element a
 rightColumn =
-    column
-        [ width (fillPortion 5)
-        , height fill
-        , Background.color (rgb255 150 100 150)
+    Element.column
+        [ Element.width (Element.fillPortion 5)
+        , Element.height Element.fill
+        , Element.Background.color (Element.rgb255 150 100 150)
         ]
-        [ text "This is the chat pane"
-        , text "here we chat!"
-        , el
-            [ width fill
-            , alignBottom
-            , Background.color (rgb255 155 195 155)
+        [ Element.text "This is the chat pane"
+        , Element.text "here we chat!"
+        , Element.el
+            [ Element.width Element.fill
+            , Element.alignBottom
+            , Element.Background.color (Element.rgb255 155 195 155)
             ]
-            (text ">")
+            (Element.text ">")
         ]
