@@ -21,6 +21,9 @@ A horisontally and vertically centered fixed-size box with centered text in it.
 ### GoldenRatioColumns
 Two full-height columns layed out in the 5:2 golden ratio, scaling with viewport. This demoes the use of alignment to position an element.
 
+### InteractiveButtons
+A re-make of the +1, -1 buttons from elm Html examples; click
+the buttons to increase or decrease the value displayed.
+
 ### ResponsiveRowOfBoxes
 An vertically centered row of fixed size boxes of images and text. The row is vertically centered in viewport. This example also demonstrates the use of padding between boxes.
-
